@@ -6,6 +6,7 @@ personal dotfiles
 cd ~/dotfiles
 apt-get update
 apt-get upgrade
+apt-get install git
 git submodule update --init --recursive
 ./install.sh
 ```
