@@ -48,4 +48,9 @@ alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 alias grep='grep --color=auto'
 alias install='sudo apt-get install'
 
+# import conf which is not shared on github
+if [ -f ~/.zsh_local ]; then
+	source ~/.zsh_local
+fi
+
 PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
