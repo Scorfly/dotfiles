@@ -19,6 +19,9 @@ vim /etc/hostname
 vi /etc/hosts
 /etc/init.d/hostname.sh start
 
+# change shell
+chsh
+
 cd ~/dotfiles
 git submodule update --init --recursive
 ./install.sh
