@@ -1,25 +1,10 @@
-# Set up the prompt
+# Do not enter command lines into the history list if they are duplicates of the
+# previous event.
+setopt histignorealldups
 
+# init prompt
 autoload -Uz promptinit
 promptinit
-#prompt adam1
-
-setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
-# Trucs a guigui
-
-bindkey -e
-bindkey "^X^H" run-help
-
-bindkey "\e[7~" beginning-of-line
-bindkey "\e[8~" end-of-line
-bindkey "\e[2~" paste-from-clipboard
-bindkey "\eOc" forward-word
-bindkey "\eOd" backward-word
-
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -29,6 +14,9 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 autoload -Uz compinit
 compinit
+
+autoload -U bashcompinit
+bashcompinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
