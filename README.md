@@ -3,10 +3,21 @@
 personal dotfiles
 
 ```
+# be updated
 apt-get update
 apt-get upgrade
+
+# install my favorit packet
 apt-get install git
+
+# add my user
 adduser scorfly
+
+# change my hostname
+vim /etc/hostname
+vi /etc/hosts
+/etc/init.d/hostname.sh start
+
 cd ~/dotfiles
 git submodule update --init --recursive
 ./install.sh
@@ -14,4 +25,3 @@ git submodule update --init --recursive
 
 
  - https://openclassrooms.com/courses/securiser-son-serveur-linux
- - http://www.cyberciti.biz/tips/howto-write-shell-script-to-add-user.html
