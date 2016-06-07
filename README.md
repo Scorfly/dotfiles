@@ -32,5 +32,11 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
+TODO :
 
+Ajouter certain élément de securité indiqué sur :
  - https://openclassrooms.com/courses/securiser-son-serveur-linux
+
+Gérer les clé ssh
+
+Interdir la connexion en root via ssh
