@@ -6,6 +6,7 @@ personal dotfiles
 apt-get update
 apt-get upgrade
 apt-get install git
+adduser scorfly
 cd ~/dotfiles
 git submodule update --init --recursive
 ./install.sh
