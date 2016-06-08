@@ -48,9 +48,17 @@ alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 alias grep='grep --color=auto'
 alias install='sudo apt-get install'
 
+# This var will be use to manage the prompt
+# if it set as PROD in a ~/.zsh_local, the prompt will be full red
+MY_ENV="CUSTOM"
+
 # import conf which is not shared on github
 if [ -f ~/.zsh_local ]; then
 	source ~/.zsh_local
 fi
 
 PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
+
+if [ $MY_ENV = "PROD" ]; then
+	PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
+fi
