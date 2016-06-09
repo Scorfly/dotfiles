@@ -11,6 +11,9 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+# Don't share history
+setopt append_history no_inc_append_history no_share_history
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -32,7 +35,6 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
@@ -54,11 +56,11 @@ MY_ENV="CUSTOM"
 
 # import conf which is not shared on github
 if [ -f ~/.zsh_local ]; then
-	source ~/.zsh_local
+    source ~/.zsh_local
 fi
 
 PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
 
 if [ $MY_ENV = "PROD" ]; then
-	PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
+    PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
 fi
