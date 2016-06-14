@@ -17,3 +17,6 @@ symlink "${HOME}/.vimrc" "${DOTFILES_DIR}/vimrc"
 
 # git
 symlink "${HOME}/.gitconfig" "${DOTFILES_DIR}/gitconfig"
+
+# Xdefault for rxvt
+symlink "${HOME}/.Xdefaults" "${DOTFILES_DIR}/Xdefaults"
