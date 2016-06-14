@@ -9,7 +9,7 @@ apt-get upgrade
 ```
 ```
 # install my favorit packet
-apt-get install git htop zsh screen vim
+apt-get install git htop zsh screen vim xclip
 apt-get install rxvt-unicode-256color
 ```
 ```
