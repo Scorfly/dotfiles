@@ -10,6 +10,10 @@ set tabstop=4
 " convert tab to space
 set shiftwidth=4
 
+" toogle paste mode
+" --- it permit to paste without auto indent/comment
+set pastetoggle=<F9>
+
 " Color extra whitespace
 highlight ExtraWhitespace term=standout ctermfg=67 ctermbg=33
 

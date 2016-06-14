@@ -6,6 +6,9 @@ setopt histignorealldups
 autoload -Uz promptinit
 promptinit
 
+# define default term
+export TERM='xterm-256color'
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
