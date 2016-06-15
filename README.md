@@ -9,7 +9,7 @@ apt-get upgrade
 ```
 ```
 # install my favorit packet
-apt-get install git htop zsh screen vim xclip curl suckless-tools
+apt-get install git htop zsh screen vim xclip curl suckless-tools tree
 apt-get install rxvt-unicode-256color
 ```
 ```
