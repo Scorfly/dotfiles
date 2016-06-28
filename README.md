@@ -28,6 +28,11 @@ vi /etc/hosts
 chsh
 ```
 ```
+# change ssh conf
+PermitRootLogin  no
+Port xxxxx
+```
+```
 # install config files
 cd ~/.dotfiles
 ./install.sh
