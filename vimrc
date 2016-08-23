@@ -10,6 +10,9 @@ set tabstop=4
 " convert tab to space
 set shiftwidth=4
 
+" highlight searched terms
+set hlsearch
+
 " toogle paste mode
 " --- it permit to paste without auto indent/comment
 set pastetoggle=<F9>
