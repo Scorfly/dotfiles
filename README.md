@@ -10,7 +10,7 @@ apt-get upgrade
 ```
 # install my favorit packet
 apt-get install git htop zsh screen vim xclip curl suckless-tools treen ncdu
-apt-get install rxvt-unicode-256color
+apt-get install rxvt-unicode rxvt-unicode-256color
 ```
 ```
 # add my user
