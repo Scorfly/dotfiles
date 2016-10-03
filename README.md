@@ -37,6 +37,11 @@ Port xxxxx
 cd ~/.dotfiles
 ./install.sh
 ```
+```
+# Password management
+# https://www.passwordstore.org/
+apt-get install pass
+```
 
 TODO :
 
