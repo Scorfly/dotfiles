@@ -8,6 +8,7 @@ filetype plugin indent on
 set tabstop=4
 
 " convert tab to space
+set expandtab
 set shiftwidth=4
 
 " highlight searched terms
