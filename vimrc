@@ -14,6 +14,9 @@ set shiftwidth=4
 " highlight searched terms
 set hlsearch
 
+" config mouse
+set mouse=v
+
 " toogle paste mode
 " --- it permit to paste without auto indent/comment
 set pastetoggle=<F9>
