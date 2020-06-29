@@ -23,6 +23,7 @@ set pastetoggle=<F9>
 
 " Color extra whitespace
 highlight ExtraWhitespace term=standout ctermfg=67 ctermbg=33
+highlight Comment ctermfg=darkgrey
 
 " remove useless whitespace in the end of lines
 au BufNewFile,BufRead * :match ExtraWhitespace /\s\+$/
