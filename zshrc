@@ -62,8 +62,15 @@ if [ -f ~/.zsh_local ]; then
     source ~/.zsh_local
 fi
 
-PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats ' [%b]'
+
+PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~%{%F{magenta}%}${vcs_info_msg_0_}%{%f%} $ "
 
 if [ $MY_ENV = "PROD" ]; then
-    PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~ %{%f%}% $ "
+    PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~%{%F{magenta}%}${vcs_info_msg_0_}%{%f%} $ "
 fi
