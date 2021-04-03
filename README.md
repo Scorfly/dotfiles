@@ -40,6 +40,10 @@ cd ~/.dotfiles
 ./install.sh
 ```
 ```
+# udpate timezone
+dpkg-reconfigure tzdata
+```
+```
 # Password management
 # https://www.passwordstore.org/
 apt-get install pass
