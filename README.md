@@ -46,7 +46,7 @@ dpkg-reconfigure tzdata
 ```
 # Password management
 # https://www.passwordstore.org/
-apt-get install pass
+apt-get install pass oathtool pass-extension-otp
 pass init <email>
 cd ~/.password-store
 ln -s <folder with pass>
