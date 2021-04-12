@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Source : https://github.com/jlaffaye/dotfiles
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 symlink () {
     /bin/ln -s $2 $1

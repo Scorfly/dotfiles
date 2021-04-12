@@ -1,18 +1,13 @@
-# Do not enter command lines into the history list if they are duplicates of the
-# previous event.
-setopt histignorealldups
+# Path to your oh-my-zsh installation.
+export ZSH="/home/scorfly/.oh-my-zsh"
 
-# init prompt
-autoload -Uz promptinit
-promptinit
+# Theme
+ZSH_THEME="robbyrussell"
 
-# define default term
-export TERM='xterm-256color'
+# Pluggins
+plugins=(git)
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+source $ZSH/oh-my-zsh.sh
 
 # Don't share history
 setopt append_history no_inc_append_history no_share_history
@@ -53,24 +48,12 @@ alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 alias grep='grep --color=auto'
 alias install='sudo apt-get install'
 
-# This var will be use to manage the prompt
-# if it set as PROD in a ~/.zsh_local, the prompt will be full red
-MY_ENV="CUSTOM"
-
-# import conf which is not shared on github
+# import conf which is not shared
 if [ -f ~/.zsh_local ]; then
     source ~/.zsh_local
 fi
 
-# Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
-
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats ' [%b]'
-
-PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}%m %{%F{yellow}%}%~%{%F{magenta}%}${vcs_info_msg_0_}%{%f%} $ "
-
-if [ $MY_ENV = "PROD" ]; then
-    PS1="%{%F{red}%}%n%{%f%}%{%F{green}%}@%{%f%}%{%F{red}%}%m %{%F{yellow}%}%~%{%F{magenta}%}${vcs_info_msg_0_}%{%f%} $ "
-fi
+# Prompt
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT+="%{$fg[magenta]%}%n%{$reset_color%} [%m]"
+PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)$ '
