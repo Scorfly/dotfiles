@@ -40,14 +40,26 @@ cd ~/.dotfiles
 ./install.sh
 ```
 ```
+# udpate timezone
+dpkg-reconfigure tzdata
+```
+```
 # Password management
 # https://www.passwordstore.org/
-apt-get install pass
+apt-get install pass oathtool pass-extension-otp
+pass init <email>
+cd ~/.password-store
+ln -s <folder with pass>
 ```
+```
+# export gpg key
+gpg --export -a <key-id> > public.asc
+gpg --export-secret-keys -a <key-id> > secret.asc
 
-TODO :
+# import gpg key
+gpg --import public.asc
+gpg --import secret.asc
 
-Ajouter certain élément de securité indiqué sur :
- - https://openclassrooms.com/courses/securiser-son-serveur-linux
-
-Gérer les clé ssh
+# trust key
+gpg --edit-key <key-id> trust
+```
