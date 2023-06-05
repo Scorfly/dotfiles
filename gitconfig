@@ -1,6 +1,8 @@
 [user]
-    name  = Scorfly
-    email = scorfly@gmail.com
+    name  = Louis Marie
+#    name  = Scorfly
+    email = louis.marie@ovhcloud.com
+#    email = scorfly@gmail.com
 
 [branch]
     autosetupmerge = true
@@ -37,7 +39,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
-    pushdev = !git push --set-upstream origin "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`:dev/scorfly/`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
+    pushdev = !git push --set-upstream origin "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`:dev/lmarie/`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
     rbm = !git fetch origin && git rebase origin/master
     cia = commit --amend --reset-author
     poule = pull # joke
@@ -47,3 +49,10 @@
 
 [core]
     editor = vim
+#[url "https://github"]
+#	insteadOf = git://github
+[credential]
+    helper = cache
+
+[url "ssh://git@stash.ovh.net:7999/"]
+    insteadOf = https://stash.ovh.net/scm/

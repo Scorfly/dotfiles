@@ -53,6 +53,20 @@ if [ -f ~/.zsh_local ]; then
     source ~/.zsh_local
 fi
 
+if [ -f ~/xdsl/connectivity-welcome/dotfiles/bash_aliases_connectivity ]; then
+    source ~/xdsl/connectivity-welcome/dotfiles/bash_aliases_connectivity
+fi
+
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats ' [%b]'
+
+PS1="%{%F{red}%}%n%{%f%}@%{%F{green}%}LinuxLaptop %{%F{yellow}%}%~%{%F{magenta}%}${vcs_info_msg_0_}%{%f%} $ "
+
 # Prompt
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 PROMPT+="%{$fg[magenta]%}%n%{$reset_color%} [%{$fg[green]%}%m%{$reset_color%}]"

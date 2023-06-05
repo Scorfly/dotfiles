@@ -21,7 +21,7 @@ call plug#end()
 
 " template
 " let g:airline_theme='deus'
-colorscheme palenight
+" colorscheme palenight
 let g:lightline = { 'colorscheme': 'palenight' }
 let g:airline_theme = "palenight"
 

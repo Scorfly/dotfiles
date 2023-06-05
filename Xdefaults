@@ -7,7 +7,7 @@
 ! xcalendar*markHoliday:         false
 ! !Xcursor.theme:                whitelarge
 ! !Xcursor.size:                 32
- 
+
 !-------------------------------------------------------------------------------
 !
 !   U R X V T - Setting
@@ -32,7 +32,7 @@ URxvt*saveLines:                       10000
 URxvt*cursorBlink:                     false
 !URxvt*termName:                        rxvt-256color
 URxvt*termName:                        xterm
-URxvt*font:                            xft:Dejavu Sans Mono:pixelsize=11
+URxvt*font:                            xft:Dejavu Sans Mono:pixelsize=11, xft:Twitter Color Emoji, xft:Noto Emoji
 URxvt*boldFont:                        xft:Dejavu Sans Mono:pixelsize=11
 URxvt*colorBD:                         orange
 URxvt*transparent:                      true
