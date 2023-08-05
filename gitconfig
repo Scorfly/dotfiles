@@ -53,6 +53,3 @@
 #	insteadOf = git://github
 [credential]
     helper = cache
-
-[url "ssh://git@stash.ovh.net:7999/"]
-    insteadOf = https://stash.ovh.net/scm/
