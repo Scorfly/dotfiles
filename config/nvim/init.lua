@@ -145,15 +145,15 @@ cmp.setup.cmdline({ '/', '?' }, {
     }
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-        { name = 'path' }
-    }, {
-        { name = 'cmdline' }
-    })
-})
+-- -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+-- cmp.setup.cmdline(':', {
+--     mapping = cmp.mapping.preset.cmdline(),
+--     sources = cmp.config.sources({
+--         { name = 'path' }
+--     }, {
+--         { name = 'cmdline' }
+--     })
+-- })
 
 local lsp_flags = {
     -- This is the default in Nvim 0.7+
@@ -251,6 +251,8 @@ vim.cmd([[
     nnoremap <leader>gtc <cmd>GoCoverageClear<cr>
     nnoremap <leader>lsp <cmd>LspRestart<cr>
     nnoremap <space>rn <cmd>lua vim.lsp.buf.rename()<cr>
+    nnoremap <leader>ep <cmd>lua vim.diagnostic.goto_prev()<cr>
+    nnoremap <leader>en <cmd>lua vim.diagnostic.goto_next()<cr>
 ]])
 
 -- nvim-go
@@ -298,3 +300,12 @@ vim.cmd([[
     2match ExtraWhitespace /\s\+$/
 
 ]])
+
+--- display error messages
+
+vim.diagnostic.config({
+    virtual_text = true
+})
+
+vim.o.updatetime = 1000
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

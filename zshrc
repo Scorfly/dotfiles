@@ -47,6 +47,8 @@ alias du='du --human-readable'
 alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 alias grep='grep --color=auto'
 alias install='sudo apt-get install'
+alias azerty='setxkbmap fr'
+alias bepo='setxkbmap fr bepo'
 
 # import conf which is not shared
 if [ -f ~/.zsh_local ]; then

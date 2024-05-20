@@ -1,8 +1,6 @@
 [user]
-    name  = Louis Marie
-#    name  = Scorfly
-    email = louis.marie@ovhcloud.com
-#    email = scorfly@gmail.com
+    name  = Scorfly
+    email = scorfly@gmail.com
 
 [branch]
     autosetupmerge = true
@@ -29,7 +27,7 @@
     untracked = cyan
 
 [alias]
-    ci = commit
+    ci = commit -S
     co = checkout
     st = status
     br = branch
@@ -49,7 +47,6 @@
 
 [core]
     editor = vim
-#[url "https://github"]
-#	insteadOf = git://github
+
 [credential]
     helper = cache

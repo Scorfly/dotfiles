@@ -22,8 +22,8 @@ call plug#end()
 " template
 " let g:airline_theme='deus'
 " colorscheme palenight
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:airline_theme = "palenight"
+" let g:lightline = { 'colorscheme': 'dark' }
+let g:airline_theme = "luna"
 
 " Turn on Syntax Highlighting
 syntax on
