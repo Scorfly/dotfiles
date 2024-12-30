@@ -39,6 +39,7 @@
     ls = ls-files
     pushdev = !git push --set-upstream origin "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`:dev/lmarie/`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
     rbm = !git fetch origin && git rebase origin/master
+    rbmain = !git fetch origin && git rebase origin/main
     cia = commit --amend --reset-author
     poule = pull # joke
 
